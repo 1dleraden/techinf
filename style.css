@@ -480,17 +480,22 @@ body:not(:has(.page-target:target)) #page-home,
    DETAIL PAGE
    ============================================ */
 .detail-page {
-  padding: 40px 0 60px;
+  padding: 28px 0 60px;
   min-height: 70vh;
+}
+
+.detail-page .container {
+  max-width: 1320px;
 }
 
 .detail-card {
   background: var(--surface);
   border-radius: var(--radius);
-  padding: 44px 48px;
+  padding: 36px 42px;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(99, 102, 241, 0.06);
   transition: box-shadow var(--transition);
+  overflow: hidden;
 }
 
 .detail-card:hover {
@@ -515,11 +520,23 @@ body:not(:has(.page-target:target)) #page-home,
   border-bottom: 2px dashed #2b3548;
 }
 
+.detail-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 48%) minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.detail-intro h2 {
+  margin-top: 0;
+}
+
 .detail-img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 16px;
-  margin-bottom: 28px;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(99, 102, 241, 0.06);
 }
@@ -527,10 +544,8 @@ body:not(:has(.page-target:target)) #page-home,
 .detail-card h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 32px 0 14px;
+  margin: 30px 0 12px;
   color: var(--text-dark);
-  padding-left: 16px;
-  border-left: 4px solid var(--primary);
 }
 
 .detail-card p {
@@ -604,6 +619,11 @@ body:not(:has(.page-target:target)) #page-home,
     padding: 28px 24px;
   }
 
+  .detail-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .detail-card h1 {
     font-size: 1.8rem;
   }
@@ -669,7 +689,6 @@ body:not(:has(.page-target:target)) #page-home,
 
   .detail-card h2 {
     font-size: 1.2rem;
-    padding-left: 12px;
   }
 
   .detail-card p {
@@ -677,6 +696,7 @@ body:not(:has(.page-target:target)) #page-home,
   }
 
   .detail-img {
+    width: 100%;
     border-radius: 12px;
   }
 }
